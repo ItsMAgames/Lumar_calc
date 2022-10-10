@@ -1,5 +1,9 @@
 --CALCULADORA LUMAR
 
+--Scrits requeridos
+require "Avanzadas"
+require "basicas"
+
 --PONER TEXTO
 function texto()
 	-- body
@@ -24,81 +28,7 @@ function texto_de_pi()
 	print("El valor de PI es:")
 end
 
---RAIZ CUADRADA DE UN NUMERO
-function squere(var)
-	-- body
-	print("El resultado es:")
-	local cuadrado = math.sqrt(var)
 
-	print(cuadrado)
-
-	return
-end
-
---SUMA DE 2 NUMEROS
-function sum(var1, var2)
-	-- body
-
-	print("El resultado es:")
-	local result = var1 + var2
-
-	return print(result)
-end
-
---RESTA DE 2 NUMEROS
-function less(var1, var2)
-	-- body
-
-	print("El resultado es:")
-	local resta = var1 - var2
-
-	return print(resta)
-end
-
---MULTIPLICACION DE 2 NUMEROS
-function per(var1, var2)
-	-- body
-
-	print("El resultado es:")
-	local multi = var1 * var2
-
-	return print(multi)
-end
-
---SEGUNDA POTENCIA DE UN NUMERO
-function power(var, var2)
-	-- body
-	print("El resultado es:")
-	local power = var^var2
-
-	if var1 == 0 and var2 == 0 then
-		print("Error matematico")
-		os.exit()
-	end
-
-	return print(power)
-end
-
---DIVISION DE 2 NUMEROS
-function between(var1, var2)
-	-- body
-
-	print("El resultado es:")
-	local divi = var1 / var2
-
-	if var2 == 0 then
-		print("Error matematico")
-		os.exit()
-	end
-
-	return print(divi)
-end
-
---VALOR DE PI
-function pi_val()
-	-- body
-	return print(math.pi)
-end
 
 --FUNCION PRINCIPAL
 function main()
@@ -112,7 +42,8 @@ function main()
 	local keyWord5 = "Potencia"
 	local keyWord6 = "Raiz"
 	local keyWord7 = "Pi"
-	local operaciones = {"Suma", "Resta", "Multiplicacion", "Division", "Potencia", "Raiz", "Pi"}
+	local keyWord8 = "Coseno"
+	local operaciones = {"Suma", "Resta", "Multiplicacion", "Division", "Potencia", "Raiz", "Pi", "Coseno"}
 
 	print("Bienvenido a la calculadora 'LUMAR'", "\n")
 	io.read("*l")
@@ -130,6 +61,7 @@ function main()
 	io.write(operaciones[5], "\n")
 	io.write(operaciones[6], "\n")
 	io.write(operaciones[7], "\n")
+	io.write(operaciones[8], "\n")
 
 	print("Escibe tu operacion a realizar", "\n")
 	--Variable especial
@@ -170,13 +102,18 @@ function main()
 		print(pi_val())
 	end
 
+	if input == keyWord8 then
+		print("Inserta el coseno a calcular")
+		print(coseno(io.read("*n")))
+	end
+
 	print("\n")
 
 	return
 end
 
 --GENERAR TODO
-print(main())
+main()
 
 print("Muchas gracias por usar 'LUMAR'")
 
