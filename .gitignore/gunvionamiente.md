@@ -6,10 +6,10 @@ Esto con la finalidad de que sea un codigo mucho mas sencillo de leer
 
 ## Ejemplo de como quedaria
 
-`` lua
+``` lua
 
 function degToRad()
 
 end
 
-``
+```
