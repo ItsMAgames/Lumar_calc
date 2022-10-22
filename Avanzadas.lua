@@ -16,5 +16,24 @@ function coseno(var)
 	return print(cos)
 end
 
+function tan(var)
+	-- body
+
+	--CONVERTIR DE GRADOS A RADIANES
+	local constante = 180
+
+	local calc1 = math.pi * var
+	local rad = calc1 / constante
+
+	--TANGENTE
+	print("La tangente de " .. var .. " Es igual a")
+
+	local tangente = math.tan(rad)
+
+	return tangente
+
+end
 --DEBUGGEAR LAFUNCION
-coseno(35)
+--coseno(35)
+
+tan(60)
