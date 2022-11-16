@@ -3,6 +3,7 @@
 --Scrits requeridos
 require "Avanzadas"
 require "basicas"
+require "menu"
 
 --PONER TEXTO
 function texto()
@@ -43,27 +44,11 @@ function main()
 	local keyWord6 = "Raiz"
 	local keyWord7 = "Pi"
 	local keyWord8 = "Coseno"
-	local operaciones = {"Suma", "Resta", "Multiplicacion", "Division", "Potencia", "Raiz", "Pi", "Coseno"}
+	
+	--IMPRIMIR EL MENU
+	--menuEspecial()
+	menuTrabajado()
 
-	print("Bienvenido a la calculadora 'LUMAR'", "\n")
-	io.read("*l")
-
-	print("Como primer paso tienes que seleccionar que operacion realizaras", "\n")
-	io.read("*l")
-
-	print("Acontinuacion apareceran las operaciones selecciona la tuya", "\n")
-	io.read("*l")
-
-	io.write(operaciones[1], "\n")
-	io.write(operaciones[2], "\n")
-	io.write(operaciones[3], "\n")
-	io.write(operaciones[4], "\n")
-	io.write(operaciones[5], "\n")
-	io.write(operaciones[6], "\n")
-	io.write(operaciones[7], "\n")
-	io.write(operaciones[8], "\n")
-
-	print("Escibe tu operacion a realizar", "\n")
 	--Variable especial
 	local input = io.read("*l")
 
@@ -118,3 +103,4 @@ main()
 print("Muchas gracias por usar 'LUMAR'")
 
 os.exit()
+--

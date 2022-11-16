@@ -47,7 +47,7 @@ function power(var, var2)
 	print("El resultado es:")
 	local power = var^var2
 
-	if var1 == 0 and var2 == 0 then
+	if var == 0 and var2 == 0 then
 		print("Error matematico")
 		os.exit()
 	end
