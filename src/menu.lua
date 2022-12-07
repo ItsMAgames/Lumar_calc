@@ -1,6 +1,6 @@
 --REQUERIDOS
-require "src/Avanzadas"
-require "src/basicas"
+require "Avanzadas"
+require "basicas"
 
 --MENU CIENTIFICO
 function cientifico()
@@ -68,3 +68,5 @@ end
 function algoRandom()
     
 end
+
+--cientifico()

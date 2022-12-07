@@ -1,9 +1,9 @@
 --CALCULADORA LUMAR
 
 --Scrits requeridos
-require "src/Avanzadas"
-require "src/basicas"
-require "src/menu"
+require "Avanzadas"
+require "basicas"
+require "menu"
 
 --PONER TEXTO
 function texto()
