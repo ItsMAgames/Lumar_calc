@@ -4,27 +4,28 @@
 require "Avanzadas"
 require "basicas"
 require "menu"
+require "Inicio"
 
 --PONER TEXTO
-function texto()
+local function texto()
 	-- body
 	print("Inserte un numero y presiene enter, despues inserte otro numero")
 
 	return
 end
 
-function texto_de_potencia()
+local function texto_de_potencia()
 	-- body
 	print("Inserte el numero que decea potenciar", "\n")
 	print("Despues inserte la potencia a la que se elevara", "\n")
 end
 
-function texto_de_raiz()
+local function texto_de_raiz()
 	-- body
 	print("Inserte el numero del cual quiere obtener su raiz")
 end
 
-function texto_de_pi()
+local function texto_de_pi()
 	-- body
 	print("El valor de PI es:")
 end
@@ -47,7 +48,8 @@ function main()
 	
 	--IMPRIMIR EL MENU
 	--menuEspecial()
-	menuTrabajado()
+	--MenuTrabajado()
+	Bienvenida()
 
 	--Variable especial
 	local input = io.read("*l")

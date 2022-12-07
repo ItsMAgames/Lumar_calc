@@ -4,7 +4,7 @@ require "Avanzadas"
 require "basicas"
 
 --MENU CIENTIFICO
-function cientifico()
+function Cientifico()
     --VARIABLES
     local operaciones = {"Coseno"}
 
@@ -18,17 +18,8 @@ function cientifico()
 end
 
 --ESTE ES LE MENU CONVENCIONAL
-function menuEspecial()
+function MenuEspecial()
     local operaciones = {"Suma", "Resta", "Multiplicacion", "Division", "Potencia", "Raiz", "Pi", "Coseno"}
-
-	print("Bienvenido a la calculadora 'LUMAR'", "\n")
-	io.read("*l")
-
-	print("Como primer paso tienes que seleccionar que operacion realizaras", "\n")
-	io.read("*l")
-
-	print("Acontinuacion apareceran las operaciones selecciona la tuya", "\n")
-	io.read("*l")
 
 	io.write(operaciones[1], "\n")
 	io.write(operaciones[2], "\n")
@@ -43,16 +34,14 @@ function menuEspecial()
 end
 
 --ESTEES EL MENU TRABAJADO
-function menuTrabajado()
+function MenuTrabajado()
     --VARIABLES DE LA FUNCION
     local keyWord1 = "Normal"
     local keyWord2 = "Cientifica"
     local br = "\n"
     local modos = {"Normal", "Cientifica"}
 
-    --BIENVENIDA 
-    print("Hola bienvenido a LUMAR. Acontinuacion le pediremos que escoja el modo con el que desea trabajar")
-
+    --IMPRIMIR LOS MODOS DE TRABAJO
     io.write(modos[1], br)
     io.write(modos[2], br, br)
 
@@ -60,11 +49,11 @@ function menuTrabajado()
     io.write(br)
 
     if input == keyWord1 then
-        menuEspecial()
+        MenuEspecial()
     end
 
     if input == keyWord2 then
-        cientifico()
+        Cientifico()
     end
 end
 
