@@ -46,7 +46,7 @@ function menuTrabajado()
     --VARIABLES DE LA FUNCION
     local keyWord1 = "Normal"
     local keyWord2 = "Cientifica"
-    local modos ={"Normal", "Cientifica"}
+    local modos = {"Normal", "Cientifica"}
 
     --BIENVENIDA 
     print("Hola bienvenido a LUMAR. Acontinuacion le pediremos que escoja el modo con el que desea trabajar")
