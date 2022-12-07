@@ -33,7 +33,7 @@ end
 
 
 --FUNCION PRINCIPAL
-function main()
+function Main()
 	-- body
 
 	--variables
@@ -100,7 +100,7 @@ function main()
 end
 
 --GENERAR TODO
-main()
+Main()
 
 print("Muchas gracias por usar 'LUMAR'")
 

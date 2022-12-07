@@ -1,13 +1,19 @@
-local function degToRad()
+--SCRIPTS REQUERIDOS
+require "menu"
 
-	n = io.read("*n")
+--IMPRIMIR EL MENU DE AVANZADAS
+AvanzadasInicio()
+
+--CAMBIAR DE GRADOS A RADIANES
+local function degToRad()
 	
+	n = io.read("n")
 	local constante = 180
 
 	local calc1 = math.pi * n
-	radianes = calc1 / constante
+	Radianes = calc1 / constante
 
-	return radianes
+	return n, Radianes
 
 end
 
@@ -23,7 +29,7 @@ function coseno()
 		os.exit()
 	end
 
-	local cos = math.cos(radianes)
+	local cos = math.cos(Radianes)
 
 	return print(cos)
 end
@@ -41,7 +47,7 @@ function tangente()
 		os.exit()
 	end
 
-	local tan = math.tan(radianes)
+	local tan = math.tan(Radianes)
 
 	return print(tan)
 
@@ -54,7 +60,7 @@ function seno()
 	--SENO
 	print("El seno de " .. n .. " Es igual a:")
 
-	local sen = math.sin(radianes)
+	local sen = math.sin(Radianes)
 
 	return print(sen)
 end
