@@ -1,3 +1,4 @@
+---@diagnostic disable: discard-returns
 --REQUERIDOS
 require "Avanzadas"
 require "basicas"
@@ -46,15 +47,17 @@ function menuTrabajado()
     --VARIABLES DE LA FUNCION
     local keyWord1 = "Normal"
     local keyWord2 = "Cientifica"
+    local br = "\n"
     local modos = {"Normal", "Cientifica"}
 
     --BIENVENIDA 
     print("Hola bienvenido a LUMAR. Acontinuacion le pediremos que escoja el modo con el que desea trabajar")
 
-    io.write(modos[1])
-    io.write(modos[2])
+    io.write(modos[1], br)
+    io.write(modos[2], br, br)
 
     local input = io.read("*l")
+    io.write(br)
 
     if input == keyWord1 then
         menuEspecial()
