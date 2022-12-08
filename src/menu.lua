@@ -1,11 +1,10 @@
 ---@diagnostic disable: discard-returns
 --REQUERIDOS
-require "Avanzadas"
-require "basicas"
-require "LUMAR"
+--require "Avanzadas"
+--require "basicas"
 
 --MENU CIENTIFICO
-function Cientifico()
+--[[function Cientifico()
     --VARIABLES
     local operaciones = {"Coseno"}
 
@@ -16,7 +15,7 @@ function Cientifico()
     if input == operaciones[1] then
         coseno(io.read("*n"))
     end
-end
+end]]
 
 --ESTE ES LE MENU CONVENCIONAL
 function MenuEspecial()
@@ -53,9 +52,9 @@ function MenuTrabajado()
         MenuEspecial()
     end
 
-    if input == keyWord2 then
+    --[[if input == keyWord2 then
         Cientifico()
-    end
+    end]]
 end
 
 --FUNCION PARA CREAR UN TEXTO DE INICO EN LAS AVANZADAS

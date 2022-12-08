@@ -1,7 +1,7 @@
 --CALCULADORA LUMAR
 
 --Scrits requeridos
-require "Avanzadas"
+--require "Avanzadas"
 require "basicas"
 require "menu"
 require "Inicio"
