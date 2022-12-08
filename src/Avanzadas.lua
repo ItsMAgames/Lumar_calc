@@ -1,12 +1,15 @@
+-- FIXME: Stack overflow
+-- TODO: Buscar soluciones para el sack overflow
+
 --SCRIPTS REQUERIDOS
-require "menu"
+--require "menu"
 require "timer"
 
 --FUNCION ENGLOBADORA
 function AvanGlobal()
 	
 	--IMPRIMIR EL MENU DE AVANZADAS
-	AvanzadasInicio()
+	--AvanzadasInicio()
 
 	--CAMBIAR DE GRADOS A RADIANES
 	local function degToRad()
@@ -74,3 +77,4 @@ end
 --coseno()
 --tangente()
 --seno()
+--AvanGlobal.coseno(60)
