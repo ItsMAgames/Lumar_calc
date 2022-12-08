@@ -1,7 +1,7 @@
 ---@diagnostic disable: discard-returns
 --REQUERIDOS
---require "Avanzadas"
---require "basicas"
+require "Avanzadas"
+require "basicas"
 
 --MENU CIENTIFICO
 --[[function Cientifico()
@@ -16,6 +16,8 @@
         coseno(io.read("*n"))
     end
 end]]
+
+--TEXTO DE INICIO
 
 --ESTE ES LE MENU CONVENCIONAL
 function MenuEspecial()
@@ -48,13 +50,13 @@ function MenuTrabajado()
     local input = io.read("*l")
     io.write(br)
 
-    if input == keyWord1 then
+    if input == modos[1] then
         MenuEspecial()
     end
 
-    --[[if input == keyWord2 then
-        Cientifico()
-    end]]
+    if input == modos[2] then
+        AvanGlobal()
+    end
 end
 
 --FUNCION PARA CREAR UN TEXTO DE INICO EN LAS AVANZADAS

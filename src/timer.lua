@@ -20,9 +20,9 @@ function Sleep(n) --n : seconds
         end
     end
 
-    if Terminado == true then
+    --[[if Terminado == true then
         print("DEBUG: Tiempo terminado")
-    end
+    end]]
 end
 
 --Sleep(io.read("n"))

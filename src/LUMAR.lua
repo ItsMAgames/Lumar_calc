@@ -44,11 +44,12 @@ function Main()
 	local keyWord5 = "Potencia"
 	local keyWord6 = "Raiz"
 	local keyWord7 = "Pi"
-	local keyWord8 = "Coseno"
 	
 	--IMPRIMIR EL MENU
 	--menuEspecial()
 	--MenuTrabajado()
+	-- TODO: no se que le falte a esto
+
 	Bienvenida()
 
 	--Variable especial
@@ -89,10 +90,10 @@ function Main()
 		print(pi_val())
 	end
 
-	if input == keyWord8 then
+	--[[if input == keyWord8 then
 		print("Inserta el coseno a calcular")
 		print(coseno(io.read("*n")))
-	end
+	end]]
 
 	print("\n")
 

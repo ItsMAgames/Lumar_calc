@@ -1,68 +1,73 @@
 --SCRIPTS REQUERIDOS
 require "menu"
+require "timer"
 
---IMPRIMIR EL MENU DE AVANZADAS
-AvanzadasInicio()
-
---CAMBIAR DE GRADOS A RADIANES
-local function degToRad()
+--FUNCION ENGLOBADORA
+function AvanGlobal()
 	
-	n = io.read("n")
-	local constante = 180
+	--IMPRIMIR EL MENU DE AVANZADAS
+	AvanzadasInicio()
 
-	local calc1 = math.pi * n
-	Radianes = calc1 / constante
-
-	return n, Radianes
-
-end
-
-function coseno()
-	-- TRANSFORMARDE RADIANES A GRADOS
-	degToRad()
+	--CAMBIAR DE GRADOS A RADIANES
+	local function degToRad()
 	
-	--Coseno
-	print("El coseno de " .. n  .. " Es igual a:")
+		n = io.read("n")
+		local constante = 180
 
-	if n == 90 then
-		print(0)
-		os.exit()
+		local calc1 = math.pi * n
+		Radianes = calc1 / constante
+
+		return n, Radianes
+
 	end
 
-	local cos = math.cos(Radianes)
+	function coseno()
+		-- TRANSFORMARDE RADIANES A GRADOS
+		degToRad()
+	
+		--Coseno
+		print("El coseno de " .. n  .. " Es igual a:")
 
-	return print(cos)
-end
+		if n == 90 then
+			print(0)
+			os.exit()
+		end
 
-function tangente()
+		local cos = math.cos(Radianes)
 
-	degToRad()
-
-	--LA TANGENTE
-	print("La tangente de " .. n .. " Es igual a:")
-
-	--CORRECCIONDE BUG
-	if n == 90 then
-		print("No calculable")
-		os.exit()
+		return print(cos)
 	end
 
-	local tan = math.tan(Radianes)
+	function tangente()
 
-	return print(tan)
+		degToRad()
 
-end
+		--LA TANGENTE
+		print("La tangente de " .. n .. " Es igual a:")
 
-function seno()
+		--CORRECCIONDE BUG
+		if n == 90 then
+			print("No calculable")
+			os.exit()
+		end
 
-	degToRad()
+		local tan = math.tan(Radianes)
 
-	--SENO
-	print("El seno de " .. n .. " Es igual a:")
+		return print(tan)
 
-	local sen = math.sin(Radianes)
+	end
 
-	return print(sen)
+	function seno()
+
+		degToRad()
+
+		--SENO
+		print("El seno de " .. n .. " Es igual a:")
+
+		local sen = math.sin(Radianes)
+
+		return print(sen)
+	end
 end
 
 --DEBUGGEAR LAFUNCION
