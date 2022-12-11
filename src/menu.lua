@@ -3,25 +3,11 @@
 require "Avanzadas"
 require "basicas"
 
---MENU CIENTIFICO
---[[function Cientifico()
-    --VARIABLES
-    local operaciones = {"Coseno"}
-
-    io.write(operaciones[1])
-
-    local input = io.read("*l")
-
-    if input == operaciones[1] then
-        coseno(io.read("*n"))
-    end
-end]]
-
 --TEXTO DE INICIO
 
 --ESTE ES LE MENU CONVENCIONAL
 function MenuEspecial()
-    local operaciones = {"Suma", "Resta", "Multiplicacion", "Division", "Potencia", "Raiz", "Pi", "Coseno"}
+    local operaciones = {"Suma", "Resta", "Multiplicacion", "Division", "Potencia", "Raiz", "Pi"}
 
 	io.write(operaciones[1], "\n")
 	io.write(operaciones[2], "\n")
@@ -30,7 +16,6 @@ function MenuEspecial()
 	io.write(operaciones[5], "\n")
 	io.write(operaciones[6], "\n")
 	io.write(operaciones[7], "\n")
-	io.write(operaciones[8], "\n")
 
 	print("Escibe tu operacion a realizar", "\n")
 end

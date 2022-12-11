@@ -1,5 +1,4 @@
 --SCRIPTS REQUERIDOS
---require "menu"
 require "timer"
 
 --FUNCION ENGLOBADORA
@@ -20,7 +19,8 @@ function AvanGlobal()
     	io.write(Op[2], br)
     	io.write(Op[3], br, br)
 
-end
+	end
+
 	AvanzadasInicio()
 
 	--CAMBIAR DE GRADOS A RADIANES
@@ -37,6 +37,8 @@ end
 	end
 
 	function coseno()
+		-- CREAR UN TEXTO DE INICO
+		print("Inserte el coseno que desea calcular")
 		-- TRANSFORMARDE RADIANES A GRADOS
 		degToRad()
 	
@@ -54,6 +56,8 @@ end
 	end
 
 	function tangente()
+		-- TEXTO DE INICIO DE LA FUNCION
+		print("Inserte la tangente que desea calcular")
 
 		degToRad()
 
@@ -73,6 +77,8 @@ end
 	end
 
 	function seno()
+		-- TEXTO DE INICO DE LA FUNCION 
+		print("Inserte el seno que desea calcular")
 
 		degToRad()
 
@@ -83,9 +89,20 @@ end
 
 		return print(sen)
 	end
+
+	-- INICIALIZAR LAS FUNCIONES TRIGONOMETRICAS
+	local input = io.read("*l")
+
+	if input == Op[1] then
+		seno()
+	elseif input == Op[2] then
+		coseno()
+	elseif input == Op[3] then
+		tangente()
+	end
+
 end
 
--- INICIALIZAR LAS FUNCIONES TRIGONOMETRICAS
 
 
 --DEBUGGEAR LAFUNCION

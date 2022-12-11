@@ -1,5 +1,7 @@
 --CALCULADORA LUMAR
 
+-- TODO: IMPLEMENTAR FUNCIONES TRIGONOMETRICAS CON RADIANES EN "src/Avanzadas" O CREAR NUEVO SCRIPT
+
 --Scrits requeridos
 --require "Avanzadas"
 require "basicas"
@@ -48,7 +50,6 @@ function Main()
 	--IMPRIMIR EL MENU
 	--menuEspecial()
 	--MenuTrabajado()
-	-- TODO: no se que le falte a esto
 
 	Bienvenida()
 
@@ -89,11 +90,6 @@ function Main()
 		print(texto_de_pi())
 		print(pi_val())
 	end
-
-	--[[if input == keyWord8 then
-		print("Inserta el coseno a calcular")
-		print(coseno(io.read("*n")))
-	end]]
 
 	print("\n")
 
