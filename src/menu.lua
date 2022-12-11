@@ -59,22 +59,4 @@ function MenuTrabajado()
     end
 end
 
---FUNCION PARA CREAR UN TEXTO DE INICO EN LAS AVANZADAS
-function AvanzadasInicio()
-    --VARIABLES ESPECIALES
-    local br = "\n"
-    Op = {
-        "Seno",
-        "Coseno",
-        "Tangente"
-    }
-
-    print("A continuacion seleccione la operacion cientifica que desea realizar")
-
-    io.write(Op[1], br)
-    io.write(Op[2], br)
-    io.write(Op[3], br, br)
-
-end
-
 --cientifico()

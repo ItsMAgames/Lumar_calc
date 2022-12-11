@@ -1,15 +1,27 @@
--- FIXME: Stack overflow
--- TODO: Buscar soluciones para el sack overflow
-
 --SCRIPTS REQUERIDOS
 --require "menu"
 require "timer"
 
 --FUNCION ENGLOBADORA
 function AvanGlobal()
-	
-	--IMPRIMIR EL MENU DE AVANZADAS
-	--AvanzadasInicio()
+	--FUNCION PARA CREAR UN TEXTO DE INICO EN LAS AVANZADAS
+	local function AvanzadasInicio()
+    	--VARIABLES ESPECIALES
+    	local br = "\n"
+    	Op = {
+			"Seno",
+        	"Coseno",
+        	"Tangente"
+    	}
+
+    	print("A continuacion seleccione la operacion cientifica que desea realizar", br)
+
+    	io.write(Op[1], br)
+    	io.write(Op[2], br)
+    	io.write(Op[3], br, br)
+
+end
+	AvanzadasInicio()
 
 	--CAMBIAR DE GRADOS A RADIANES
 	local function degToRad()
@@ -72,6 +84,9 @@ function AvanGlobal()
 		return print(sen)
 	end
 end
+
+-- INICIALIZAR LAS FUNCIONES TRIGONOMETRICAS
+
 
 --DEBUGGEAR LAFUNCION
 --coseno()
