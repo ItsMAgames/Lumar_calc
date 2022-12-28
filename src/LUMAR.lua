@@ -99,7 +99,18 @@ end
 --GENERAR TODO
 Main()
 
-print("Muchas gracias por usar 'LUMAR'")
+print("Muchas gracias por usar 'LUMAR'", "\n")
+print("¿Desea volver a usarla?", "\n")
 
-os.exit()
---
+local t = {'Si', 'No'}
+
+io.write(t[1], "\n")
+io.write(t[2], '\n')
+
+local respuesta = io.read("l")
+
+if respuesta == "Si" then
+	Main()
+elseif respuesta == "No" then
+	os.exit()
+end
