@@ -1,5 +1,6 @@
 --SCRIPTS REQUERIDOS
 require "timer"
+require "conversiones"
 
 --FUNCION ENGLOBADORA
 function AvanGlobal()
@@ -27,7 +28,7 @@ function AvanGlobal()
 	local function degToRad()
 	
 		n = io.read("n")
-		local constante = 180
+		local constante <const> = 180
 
 		local calc1 = math.pi * n
 		Radianes = calc1 / constante
