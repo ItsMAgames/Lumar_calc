@@ -44,4 +44,28 @@ function MenuTrabajado()
     end
 end
 
+--MENU DE SELECCION DE MEDIDA DE ANGULOS
+function MenuTipos()
+    --VARIABLES DE LA FUNCION
+    local br = "\n"
+    local tipos = {"Grados", "Radianes", "Gradianes"}
+
+    --IMPRIMIR TEXTOS 
+    io.write(tipos[1], br)
+    io.write(tipos[2], br)
+    io.write(tipos[3], br)
+
+    local input = io.read("l")
+    io.write(br)
+
+    if input == tipos[1] then
+        
+    elseif input == tipos[2] then
+
+    elseif input == tipos[3] then
+        
+    end
+
+end
+
 --cientifico()

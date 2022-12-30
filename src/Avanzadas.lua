@@ -20,9 +20,13 @@ function AvanGlobal()
     	io.write(Op[2], br)
     	io.write(Op[3], br, br)
 
+		--SLEEP ANTES DE QUE ACABE LA FUNCION
+		Sleep(5)
+
 	end
 
 	AvanzadasInicio()
+	--MenuTipos()
 
 	--CAMBIAR DE GRADOS A RADIANES
 	local function degToRad()
