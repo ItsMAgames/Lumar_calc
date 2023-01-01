@@ -49,8 +49,12 @@ function MenuTipos()
     --VARIABLES DE LA FUNCION
     local br = "\n"
     local tipos = {"Grados", "Radianes", "Gradianes"}
+    Tipo = {
+        value = nil 
+    }
 
     --IMPRIMIR TEXTOS 
+    print("Seleccione el tipo de medida que quiere realizar")
     io.write(tipos[1], br)
     io.write(tipos[2], br)
     io.write(tipos[3], br)
@@ -59,11 +63,11 @@ function MenuTipos()
     io.write(br)
 
     if input == tipos[1] then
-        
+        Tipo.value = 1
     elseif input == tipos[2] then
-
+        Tipo.value = 2
     elseif input == tipos[3] then
-        
+        Tipo.value = 3
     end
 
 end

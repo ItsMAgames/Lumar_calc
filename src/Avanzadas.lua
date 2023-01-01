@@ -1,6 +1,6 @@
 --SCRIPTS REQUERIDOS
 require "timer"
-require "conversiones"
+-- require "conversiones"
 
 --FUNCION ENGLOBADORA
 function AvanGlobal()
@@ -21,12 +21,12 @@ function AvanGlobal()
     	io.write(Op[3], br, br)
 
 		--SLEEP ANTES DE QUE ACABE LA FUNCION
-		Sleep(5)
+		--Sleep(5)
 
 	end
 
+	MenuTipos()
 	AvanzadasInicio()
-	--MenuTipos()
 
 	--CAMBIAR DE GRADOS A RADIANES
 	local function degToRad()
@@ -41,43 +41,148 @@ function AvanGlobal()
 
 	end
 
+	-- PASAR DE RADIANES A GRADOS
+function RadToDeg(n)  
+    n = n or io.read("n")
+
+    local num <const> = 180
+
+    --CONVERTIR
+    local calc1 = n * num
+    Grados = calc1 / math.pi
+
+    return n, Grados
+end
+
+-- GRADOS A GRADIANES
+function DegToGra(n)
+    n = n or io.read("n")
+
+    local const1 <const> = 200
+    local const2 <const> = 180
+    
+    local calc1 = n * const1
+    Gradianes = calc1 / const2
+
+    return n, Gradianes
+end
+
+--GRADIANES A GRADOS
+function GraToDeg(n)
+    n = n or io.read("n")
+
+    local const1 <const> = 200
+    local const2 <const> = 180
+
+    local calc1 = n * const2
+    Degrees = calc1 / const1
+
+    return n, Degrees 
+end
+
+--GRADIANES A RADIANES
+function GraToRad()
+    n = io.read("n")
+
+    local const <const> = 200
+
+    local calc1 = n * math.pi
+    Radi = calc1 / const
+
+    return n, Radi
+end
+
+--RADIANES A GRADIANES
+function RadToGrad()
+    n = io.read("n")
+
+    local const <const> = 200
+
+    local calc = n * const
+    Grads = calc / math.pi
+
+    return n, Grads
+end
+
+function Rads(n)
+	n = n or io.read("n")
+
+	return n
+end
+
 	function coseno()
 		-- CREAR UN TEXTO DE INICO
 		print("Inserte el coseno que desea calcular")
-		-- TRANSFORMARDE RADIANES A GRADOS
-		degToRad()
-	
-		--Coseno
-		print("El coseno de " .. n  .. " Es igual a:")
+		-- METODO DE CONVERSION
+		if Tipo.value == 1 then
+			degToRad()
+			print("El coseno de " .. n  .. " Es igual a:")
 
-		if n == 90 then
-			print(0)
-			os.exit()
+			if n == 90 then
+				print(0)
+				os.exit()
+			end
+			local cos = math.cos(Radianes)
+
+			return print(cos)
+
+		elseif Tipo.value == 2 then
+			Rads()
+
+			print("El coseno de " .. n  .. " Es igual a:")
+	
+			local cos = math.cos(n)
+	
+			return print(cos)
+
+		elseif Tipo.value == 3 then
+			GraToRad()
+
+			print("El coseno de " .. n .. " Es igual a:")
+	
+			local cos = math.cos(Radi)
+	
+			return print(cos)
 		end
 
-		local cos = math.cos(Radianes)
-
-		return print(cos)
 	end
 
 	function tangente()
 		-- TEXTO DE INICIO DE LA FUNCION
 		print("Inserte la tangente que desea calcular")
 
-		degToRad()
+		if Tipo.value == 1 then
+			degToRad()
+			print("La tangente de " .. n  .. " Es igual a:")
 
-		--LA TANGENTE
-		print("La tangente de " .. n .. " Es igual a:")
+			--CORRECCIONDE BUG
+			if n == 90 then
+				print("No calculable")
+				os.exit()
+			end
 
-		--CORRECCIONDE BUG
-		if n == 90 then
-			print("No calculable")
-			os.exit()
+			local tan = math.cos(Radianes)
+
+			return print(tan)
+
+		elseif Tipo.value == 2 then
+			Rads()
+
+			print("La tangente de " .. n  .. " Es igual a:")
+	
+			local tan = math.cos(n)
+	
+			return print(tan)
+
+		elseif Tipo.value == 3 then
+			GraToRad()
+
+			print("La tangente de " .. n .. " Es igual a:")
+	
+			local tan = math.cos(Radi)
+	
+			return print(tan)
 		end
-
-		local tan = math.tan(Radianes)
-
-		return print(tan)
 
 	end
 
@@ -85,14 +190,33 @@ function AvanGlobal()
 		-- TEXTO DE INICO DE LA FUNCION 
 		print("Inserte el seno que desea calcular")
 
-		degToRad()
+		if Tipo.value == 1 then
+			degToRad()
+			print("El seno de " .. n  .. " Es igual a:")
 
-		--SENO
-		print("El seno de " .. n .. " Es igual a:")
+			local sen = math.cos(Radianes)
 
-		local sen = math.sin(Radianes)
+			return print(sen)
 
-		return print(sen)
+		elseif Tipo.value == 2 then
+			Rads()
+
+			print("El seno de " .. n  .. " Es igual a:")
+	
+			local sen = math.cos(n)
+	
+			return print(sen)
+
+		elseif Tipo.value == 3 then
+			GraToRad()
+
+			print("El seno de " .. n .. " Es igual a:")
+	
+			local sen = math.cos(Radi)
+	
+			return print(sen)
+		end
+
 	end
 
 	-- INICIALIZAR LAS FUNCIONES TRIGONOMETRICAS
@@ -107,8 +231,6 @@ function AvanGlobal()
 	end
 
 end
-
-
 
 --DEBUGGEAR LAFUNCION
 --coseno()

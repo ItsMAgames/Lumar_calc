@@ -46,7 +46,7 @@ function GraToRad(n)
     local calc1 = n * math.pi
     Rads = calc1 / const
 
-    return n, Rads
+    return n, Radianes
 end
 
 --RADIANES A GRADIANES
@@ -61,9 +61,21 @@ function RadToGrad(n)
     return n, Grads
 end
 
+function GraToRad()
+    n = io.read("n")
+
+    local const <const> = 200
+
+    local calc1 = n * math.pi
+    Radi = calc1 / const
+
+    return n, Radi
+end
+
 --DEBUGGEAR LAS FUNCIONES
 --print(RadToDeg(0.785398))
 --print(DegToGra(45))
 --print(GraToDeg(50))
 --print(GraToRad(50))
 --print(RadToGrad(0.785398))
+print(GraToRad(50))
