@@ -13,11 +13,7 @@ function Sleep(n) --n : seconds
     --local resultado = clock() - t0
     
     while clock() - t0 <= n do 
-        Terminado = false
-
-        if clock() - t0 <= n then
-            Terminado = true
-        end
+        --print(math.ceil(n - (clock() - t0)))
     end
 
     --[[if Terminado == true then
