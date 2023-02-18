@@ -3,8 +3,9 @@
 --VARIABLE REQUERIDA
 local clock = os.clock
 
---FUNCION PARA CREAR UN TEMPORIZADOR
-function Sleep(n) --n : seconds
+---FUNCION PARA CREAR UN TEMPORIZADOR
+---@param n number
+function Sleep(n)
 
     --VARIABLE ESPECIAL
     
